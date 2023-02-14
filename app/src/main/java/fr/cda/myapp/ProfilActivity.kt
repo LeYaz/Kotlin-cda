@@ -2,6 +2,7 @@ package fr.cda.myapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
 class ProfilActivity : AppCompatActivity() {
@@ -13,6 +14,11 @@ class ProfilActivity : AppCompatActivity() {
         val ageTextView = findViewById<TextView>(R.id.age)
         nameTextView.setText("Nom : ${profile?.name}")
         ageTextView.setText("Age : ${profile?.age}")
+
+        val buttonDialog = findViewById<Button>(R.id.dialog_suppression)
+        buttonDialog.setOnClickListener {
+
+        }
 
     }
 }
