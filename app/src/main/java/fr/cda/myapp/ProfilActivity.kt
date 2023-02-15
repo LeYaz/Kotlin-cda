@@ -17,7 +17,18 @@ class ProfilActivity : AppCompatActivity() {
 
         val buttonDialog = findViewById<Button>(R.id.dialog_suppression)
         buttonDialog.setOnClickListener {
+            val fragment = ConfirmationDeleteDialogFragment()
+            fragment.listener = object : ConfirmationDeleteDialogFragment.ConfirmationDeleteListener{
+                override fun onDialogPositiveClick() {
+                    fragment.show(supportFragmentManager, "FileListDialogFragment")
+                }
 
+                override fun onDialogNegativeClick() {
+                    TODO("Not yet implemented")
+                }
+
+            }
+            fragment.show(supportFragmentManager, "FileListDialogFragment")
         }
 
     }

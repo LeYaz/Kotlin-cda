@@ -36,4 +36,6 @@ class ConfirmationDeleteDialogFragment : DialogFragment() {
 
         return builder.create()
     }
+
+
 }
